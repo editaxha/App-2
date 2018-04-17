@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   
   
   resources :articles #na jep mundesine put,post,update
-
+  
+  
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
